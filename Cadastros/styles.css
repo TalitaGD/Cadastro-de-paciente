@@ -1,0 +1,403 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+  
+a {
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	transition: 0.3s;
+}
+  
+a:hover {
+	opacity: 0.7;
+}
+  
+.logo {
+	font-size: 24px;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family:Arial, Helvetica, sans-serif;
+	background: #f7c006;
+	height: 8vh;
+}
+  
+main {
+	background: url("bg.jpg") no-repeat center center;
+	background-size: cover;
+	height: 92vh;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+.nav-list {
+	list-style: none;
+	display: flex;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+.nav-list li {
+	letter-spacing: 3px;
+	margin-left: 32px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+.mobile-menu {
+	display: none;
+	cursor: pointer;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+.mobile-menu div {
+	width: 32px;
+	height: 2px;
+	background: #fff;
+	margin: 8px;
+	transition: 0.3s;
+	font-family:Arial, Helvetica, sans-serif;
+}
+  
+@media (max-width: 999px) {
+	body {
+	  overflow-x: hidden;
+	}
+	.nav-list {
+	  position: absolute;
+	  top: 8vh;
+	  right: 0;
+	  width: 50vw;
+	  height: 92vh;
+	  background: #f7c006;
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: space-around;
+	  transform: translateX(100%);
+	  transition: transform 0.3s ease-in;
+	  font-family:Arial, Helvetica, sans-serif;
+	}
+	.nav-list li {
+	  margin-left: 0;
+	  opacity: 0;
+	}
+	.mobile-menu {
+	  display: block;
+	}
+}
+  
+.nav-list.active {
+	transform: translateX(0);
+}
+  
+@keyframes navLinkFade {
+	from {
+	  opacity: 0;
+	  transform: translateX(50px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateX(0);
+    }
+}
+  
+.mobile-menu.active .line1 {
+	transform: rotate(-45deg) translate(-8px, 8px);
+}
+  
+.mobile-menu.active .line2 {
+	opacity: 0;
+}
+  
+.mobile-menu.active .line3 {
+	transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.btn-cadastro {
+	background-color: #dda900; 
+ 	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.btn-sair {
+	background-color: #ffffff; 
+ 	border: none;
+	color: #f7c006;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 20px;
+	font-size: 16px;
+	font-weight: bold
+}
+
+
+/*============================================*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+  }
+  
+button {
+  cursor: pointer;
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  padding: 10px;
+  margin: auto;
+  border-radius: 10px;
+  margin-top: 30px;
+  background: rgb(245, 245, 245);
+  align-items: center;
+}
+
+.header {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.header span {
+  font-weight: 900;
+  color: #d3d3d3;
+  font-size: 25px;
+  margin-left: 30px;
+  word-break: break-all;
+}
+
+#new {
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: rgb(0, 226, 49);
+  font-weight: bold;
+}
+
+#new:hover{
+	background: rgb(0, 177, 38);;
+}
+
+.divTable {
+  padding: 10px;
+  width: 100%; 
+  height:inherit; 
+  overflow:auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke; 
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray; 
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+
+tr {
+  border-bottom: 1px solid rgb(206, 206, 206)!important;
+}
+
+tbody tr td {
+   vertical-align: text-top;
+  padding: 6px;
+  max-width: 50px;
+}
+
+thead tr th {
+	padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+thead tr th.acao {
+  width: 100px!important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+  
+  .header span {
+    font-size: 15px;
+  }
+
+  #new {
+    padding: 5px;
+    font-size: 10px;
+  }
+
+  thead tr th.acao {
+    width: auto!important;
+  }
+  
+  td button i {
+    font-size: 20px!important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90%!important;
+  }
+
+  .modal label {
+    font-size: 12px!important;
+  }
+}
+
+.campos {
+	margin: -10px;
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  width: 70%;
+  height: 60%;
+}
+
+.modal label {
+  font-size: 18px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px; 
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.modal button {
+  width: 100%;
+  margin: 20px auto;
+  outline: none;
+  border-radius: 20px; 
+  padding: 5px 10px; 
+  width: 20%;
+  height: 40px;
+  display: block;
+  border: none;
+  background-color: rgb(57, 57, 226);
+  color: white;
+  font-weight: bold;
+}
+
+.modal button:hover{
+	background-color: rgb(16, 16, 190);
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
+
+.edit {
+	height: 20px;
+	margin: auto;
+}
+
+.delete {
+	height: 20px;
+	margin: auto;
+}
+
+

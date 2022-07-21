@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/Cadastros/styles.css">
+
+	<title>Cadastrando pacientes</title>
+
+	</head>
+	<header>
+		<nav>
+		  <a href="/Principal/index.html" class="logo">Clínica ACME</a>
+		  <div class="mobile-menu">
+			<div class="line1"></div>
+			<div class="line2"></div>
+			<div class="line3"></div>
+		  </div>
+		  <ul class="nav-list">
+			<li><a href="/Cadastros/index.html" class="btn-cadastro">Cadastrar ou Consultar</a></li>
+			<li><a href="/Login/index.html" class="btn-sair">Sair</a></li>
+		   </ul>
+		</nav>
+	  </header>
+	<body>
+	
+
+	 
+
+	  <div class="container">
+		<div class="header">
+		  <span>Cadastro de pacientes:</span>
+		  <button onclick="openModal()" id="new"> Novo Cadastro</i></button>
+		</div>
+	
+		<div class="divTable">
+		  <table>
+			<thead>
+			  <tr>
+				<th>Nome completo:</th>
+				<th>Data de nascimento:</th>
+				<th>CPF:</th>
+				<th>Sexo:</th>
+				<th>Endereço:</th>
+				<th>Status:</th>
+				<th class="acao">Editar</th>
+				<th class="acao">Excluir</th>
+			  </tr>
+			</thead>
+			<tbody>
+			</tbody>
+		  </table>
+		</div>
+	
+		<div class="modal-container">
+		  <div class="modal">
+			<form>
+			  <label for="m-nome">Nome completo</label>
+			  <input id="m-nome" type="text" required placeholder="Nome completo"/>
+	  
+			  <label for="m-data">Data de nascimento</label>
+			  <input id="m-data" type="date" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" placeholder="Data de nascimento" value="2017-06-01"/>
+	  
+			  <label for="m-CPF">CPF</label>
+			  <input id="m-CPF" type="number" required placeholder="000.000.000-00"/>
+
+			  <label for="m-endereco" class="endereço">Endereço</label>
+			  <input id="m-endereco" type="text" required placeholder="Endereço"/>
+
+			  <label for="m-sexo">Sexo: </label>
+				<select name="m-sexo" id="m-sexo" >
+					<option value=""></option>
+					<option value="Feminino">Feminino</option>
+					<option value="Masculino">Masculino</option>
+				</select>
+
+
+
+			  <label for="m-status">Status: </label>
+				<select name="m-status" id="m-status">
+					<option value=""></option>
+					<option value="Ativo">Ativo</option>
+					<option value="Desativado">Desativado</option>
+				</select>
+				
+			  <button id="btnSalvar">Salvar</button>
+
+			  
+			</form>
+		  </div>
+		</div>
+	
+	  </div>
+	  <script src="script.js"></script>
+		 
+	</body>
+
+
+
+</html>
